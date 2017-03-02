@@ -1,7 +1,6 @@
 # Sketch Plugin: Artboard Navigator (Alpha)
 
-- Easily "Go to Top" on any selected artboard (or parent artboard from a selected layer)
-- "Go to Bottom" in the works
+- Easily "Go to Top"/"Go to Bottom" on any selected artboard (or parent artboard from a selected layer)
 
 #### Tested on Sketch 42
 
