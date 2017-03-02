@@ -18,12 +18,46 @@ var go_to_top = function (context) {
 
     [selectedArtboard select:true byExpandingSelection:false];
 
-    var ArtboardRect = [selectedArtboard absoluteRect];
+    var artboardRect = [selectedArtboard absoluteRect];
     var topPadding = 50;
-    var artboardY = [ArtboardRect y];
-    var artboardX = [ArtboardRect x];
+    var artboardY = [artboardRect y];
+    var artboardX = [artboardRect x];
     var newArtboardY = artboardY + (viewportH / 2) - topPadding;
-    var rectWidth = [ArtboardRect width];
+    var rectWidth = [artboardRect width];
+    var rectHeight = 0;
+
+    var boundRect = NSMakeRect(artboardX, newArtboardY, rectWidth, rectHeight);
+    view.centerRect(boundRect);
+  }
+};
+
+var go_to_bottom = function (context) {
+  var doc = context.document;
+  var selection = context.selection;
+  var page = [doc currentPage];
+  var view = [doc currentView];
+  var viewportFrame = [view frame];
+  var zoomValue = [doc zoomValue];
+  var viewportW = viewportFrame.size.width / zoomValue;
+  var viewportH = viewportFrame.size.height / zoomValue;
+  var selectedArtboard;
+
+  if ([selection count] > 0) {
+    var selectedArtboard = [selection objectAtIndex:0];
+
+    while ([selectedArtboard parentGroup] != page) {
+      selectedArtboard = [selectedArtboard parentGroup];
+    }
+
+    [selectedArtboard select:true byExpandingSelection:false];
+
+    var artboardRect = [selectedArtboard absoluteRect];
+    var bottomPadding = 50;
+    var artboardY = [artboardRect y];
+    var artboardX = [artboardRect x];
+    var artboardH = [artboardRect height];
+    var newArtboardY = artboardY + artboardH - (viewportH / 2) + bottomPadding;
+    var rectWidth = [artboardRect width];
     var rectHeight = 0;
 
     var boundRect = NSMakeRect(artboardX, newArtboardY, rectWidth, rectHeight);
