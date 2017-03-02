@@ -1,10 +1,13 @@
 # Sketch Plugin: Artboard Navigator (Alpha)
 
-- Easily "Go to Top"/"Go to Bottom" on any selected artboard (or parent artboard from a selected layer)
+Easily "Go to Top/Bottom" on any selected artboard (or parent artboard from a selected layer)
 
 #### Tested on Sketch 42
 
+## Shortcuts
+* Go To Top: `CMD SHIFT 1`
+* Go To Bottom: `CMD SHIFT 2`
 
 ## Installation
-
-Open Sketch, Choose **Plugins** > **Manage Plugins** > **Show Plugins Folder**. Download the plugin and add the `Artboard-Navigator.sketchplugin` file to the plugins directory.
+1. <a href="https://github.com/ryanjohnson-me/Sketch-Artboard-Navigator/archive/master.zip">Download Pugin (.zip)</a> and unzip
+2. Double click `Artboard-Navigator.sketchplugin` to install
