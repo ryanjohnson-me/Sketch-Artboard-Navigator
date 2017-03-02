@@ -1,0 +1,23 @@
+{
+  "author" : "Ryan Johnson",
+  "commands" : [
+    {
+      "script" : "artboard_nav.cocoascript",
+      "handler": "go_to_top",
+      "shortcut" : "command shift 1",
+      "name" : "Go to Top",
+      "identifier" : "go_to_top_artboard"
+    }
+  ],
+  "menu" : {
+    "items" : [
+      "go_to_top_artboard"
+    ],
+    "title" : "Artboard Navigator"
+  },
+  "compatibleVersion": "0.1",
+  "version" : "0.1",
+  "description" : "artboard navigator",
+  "authorEmail" : "contact@ryanjohnson.me",
+  "name" : "Artboard Navigator"
+}

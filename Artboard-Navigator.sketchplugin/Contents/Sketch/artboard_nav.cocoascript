@@ -1,0 +1,32 @@
+var go_to_top = function (context) {
+  var doc = context.document;
+  var selection = context.selection;
+  var page = [doc currentPage];
+  var view = [doc currentView];
+  var viewportFrame = [view frame];
+  var zoomValue = [doc zoomValue];
+  var viewportW = viewportFrame.size.width / zoomValue;
+  var viewportH = viewportFrame.size.height / zoomValue;
+  var selectedArtboard;
+
+  if ([selection count] > 0) {
+    var selectedArtboard = [selection objectAtIndex:0];
+
+    while ([selectedArtboard parentGroup] != page) {
+      selectedArtboard = [selectedArtboard parentGroup];
+    }
+
+    [selectedArtboard select:true byExpandingSelection:false];
+
+    var ArtboardRect = [selectedArtboard absoluteRect];
+    var topPadding = 50;
+    var artboardY = [ArtboardRect y];
+    var artboardX = [ArtboardRect x];
+    var newArtboardY = artboardY + (viewportH / 2) - topPadding;
+    var rectWidth = [ArtboardRect width];
+    var rectHeight = 0;
+
+    var boundRect = NSMakeRect(artboardX, newArtboardY, rectWidth, rectHeight);
+    view.centerRect(boundRect);
+  }
+};
