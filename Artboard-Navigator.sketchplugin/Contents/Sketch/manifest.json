@@ -23,6 +23,7 @@
     ],
     "title" : "Artboard Navigator"
   },
+  "identifier": "com.example.sketch.artboard-navigator",
   "compatibleVersion": "42",
   "version" : "0.2",
   "description" : "artboard navigator",
