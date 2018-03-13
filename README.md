@@ -2,7 +2,7 @@
 
 Easily "Go to Top/Bottom" on any selected artboard (or parent artboard from a selected layer)
 
-#### Tested on Sketch 42
+#### Tested on Sketch 49
 
 ## Shortcuts
 * Go To Top: `CMD SHIFT 1`
